@@ -1,0 +1,58 @@
+= JUnit5
+
+== Was sind JUnit5 Tests
+
+
+* Unit-Tests sind dazu da um verschiedene Funktionen und Teile eines Codes zu testen
+* verschiedene Fehler und Bugs finden
+* Qualität des Projekt gefördert
+* mehr Unitests -> höhere Qualität
+
+== 2 & 3) Wie erstellt man Unittests in JUnit5
+
+* Wesentliches:
+    - dependecy in pom.xml hinzufügen
+
+* Location der Tests und Aufbau:
+    - In einem eigenen Source folder: 
+        - src/main/java - for Java classes
+        - src/test/java - for test classes
+
+== 4) Wichtigsten Annotationen
+
+* @Test
+* @ParameterizedTest
+* @RepeatedTest
+* @DisplayName
+
+=== Weitere Annotationen
+* @BeforeEach
+* @AfterEach
+* @BeforeAll
+* @AfterAll
+* @Disabled
+
+== 5) Assertion
+
+* Bestimmung des Pass- oder Fail-Status
+* Methoden von der Klasse *org.junit.Assert* bereitgestellt
+** die die Klasse *java.lang.Object* erweitert
+* Klasse namens Assert
+* Reihe von Assertion-Methoden
+
+== 6) Dynamische Tests
+
+* Es gibt normale unitest mit @Test Annotation sie werden erstellt, wenn man das Projekt kompiliert.
+* Es gibt Dynamische Tests - sie werden in Runtime erstellt (erst wenn man es braucht) mit der Annotation @TestFactory.
+
+== 7) Parameterized Tests
+Parameterized Tests sind normale unitest nur mit Parametern.
+
+== 8) Testreihenfolge festlegen
+
+* Normal sollte die Testreihenfolge ja nicht festgelegt werden
+** Eine Test-Methode nicht von einer anderen abhängig sein sollte.
+
+=== Code-Spezifisches
+* für die Klasse die @TestMethodOrder(OrderAnnotation.class) Annotation benötigt. 
+* @Order Annnotation & Integer Parameter -> Reihenfolge festlegen 
