@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +9,7 @@ class UserTest {
 
     @Test
     @BeforeAll
+    @DisplayName("Neue Job anlegen")
     void newJob() {
         User user = new User("Berdan");
         user.newJob(new Job("Berdan", "Fenster putzen"));
@@ -16,6 +18,7 @@ class UserTest {
 
     @Test
     @Order(1)
+    @DisplayName("Arbeit annehmen")
     void work() {
         User user = new User("Berdan");
         user.work(new Job("Berdan", "Fenster putzen"));
@@ -24,6 +27,7 @@ class UserTest {
 
     @Test
     @Order(2)
+    @DisplayName("Arbeit fertigstellen")
     void finishJob() {
         User user = new User("Berdan");
         user.finishJob(new Job("Berdan", "Fenster putzen"));

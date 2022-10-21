@@ -71,18 +71,19 @@ Junit bietet eine *Klasse namens Assert*, die eine Reihe von *Assertion-Methoden
 
 Die Assert-Methoden werden von der Klasse org.junit.Assert bereitgestellt, die die Klasse java.lang.Object erweitert.
 
-== 6) Dynamische Tests
+== 6) Gewöhnliche Unitests
 
-Es gibt normale unitest  mit @Test 
-Annotation sie werden erstellt ,wenn man das Projekt kompiliert.
+Normale Unitests mit der @Test Annotation werden erst erstellt ,wenn man das Projekt kompiliert.
 
- Es gibt Dynamische Tests sie werden in runtime erstellt (erst wenn man es braucht)
- mit der Annotation @TestFactory.
+== 7) Dynamische Tests
 
-== 7) Parameterized Tests
-Parameterized Tests sind normale unitest nur mit parametern
+ Dynamische Tests  werden erst in runtime erstellt (erst wenn man sie braucht)
+ mit der @TestFactory Annotation.
 
-== 8) Testreihenfolge festlegen
+== 8) Parameterized Tests
+ Unitests mit parametern
+
+== 9) Testreihenfolge festlegen
 
 Normal sollte die Testreihenfolge ja nicht festgelegt werden. Da eine Test-Methode nicht von einer anderen abhängig sein sollte.
 
